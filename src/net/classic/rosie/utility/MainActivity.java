@@ -123,7 +123,7 @@ public class MainActivity extends PreferenceActivity {
                     String[] items = getResources().getStringArray(R.array.links_tommy);
                     if (items[which].equals(getString(R.string.gh_source))) {
                     	Intent githubIntent = new Intent(Intent.ACTION_VIEW,
-                            	Uri.parse("https://github.com/romanbb/ROM-Control/"));
+                            	Uri.parse("https://github.com/tommytomatoe/RosieUtility"));
                             	startActivity(githubIntent);
                     } else if (items[which].equals(getString(R.string.home))) {
                     	Intent homeIntent = new Intent(Intent.ACTION_VIEW,
