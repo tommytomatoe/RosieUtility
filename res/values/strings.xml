@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">Rosie Utility</string>
+    <string name="main_pref">Customize Right Button</string>
+    <string name="romanbb">Romanbb - original source</string>
+    <string name="tt">tommytomatoe - adpated source</string>
+    <string name="click_url">Click to view source</string>
+    <string name="credits">Credits</string>
+    <string name="select">Select destination...</string>
+    <string name="gh_source">Github source</string>
+    <string name="roman_twitter">Romanbb Twitter</string>
+    <string name="home">Classic Home</string>
+
+</resources>

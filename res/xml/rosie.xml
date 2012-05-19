@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="sense_pref_root" >
+    
+    	<PreferenceCategory 
+    	    android:title="@string/main_pref">
+    	    
+    	    <CheckBoxPreference
+            	android:key="use_custom_rosie_activity"
+            	android:title="Enable custom personalize button" />
+
+        	<Preference
+            	android:dependency="use_custom_rosie_activity"
+            	android:key="pref_rosie_activity"
+            	android:title="Custom Personalize button" />
+        
+    	</PreferenceCategory>
+        
+        <PreferenceCategory
+			android:title="@string/credits">
+			
+			<Preference
+				android:summary="@string/click_url"
+				android:key="roman_source"
+				android:title="@string/romanbb" />
+			
+			<Preference
+				android:summary="@string/click_url"
+				android:key="tt_source"
+				android:title="@string/tt" />
+			
+		</PreferenceCategory>
+
+</PreferenceScreen>
