@@ -1,22 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:key="sense_pref_root" >
-    
-    	<PreferenceCategory 
-    	    android:title="@string/main_pref">
-    	    
-    	    <CheckBoxPreference
-            	android:key="use_custom_rosie_activity"
-            	android:title="Enable custom personalize button" />
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="sense_pref_root">
+	
+    <PreferenceCategory
+		android:title="Restart Rosie"
+		android:key="sense_restart_rosie_cat">
 
-        	<Preference
-            	android:dependency="use_custom_rosie_activity"
-            	android:key="pref_rosie_activity"
-            	android:title="Custom Personalize button" />
-        
-    	</PreferenceCategory>
-        
-        <PreferenceCategory
+		<Preference
+			android:key="kill_rosie"
+			android:title="Kill Rosie"
+			android:summary="Use this whenever changing any Sense Launcher tweaks" />
+	</PreferenceCategory>
+    
+	<PreferenceCategory 
+	    android:title="Right Button Activity">		
+	    
+	    <!-- <Preference
+			android:title="Right"
+			android:key="launch_right"
+			android:summary="Use custom application for right button">
+				<intent
+					android:action="android.intent.action.MAIN"
+					android:targetPackage="com.htc.launcher"
+					android:targetClass="com.htc.launcher.classic.LauncherRight" />
+				
+		</Preference> -->
+		
+		<CheckBoxPreference
+			android:title="Use custom application"
+			android:summary="Use custom application instead of the personalize menu"
+			android:key="click_right">
+		</CheckBoxPreference>
+		<Preference
+			android:key="click_right_activity"
+			android:title="Select custom application"
+			android:dependency="click_right" />
+
+		<!-- <CheckBoxPreference
+			android:title="Long-press"
+			android:key="long_right">
+		</CheckBoxPreference>
+		<Preference
+			android:key="long_right_activity"
+			android:title="Select custom application"
+			android:dependency="long_right" /> -->
+	</PreferenceCategory>
+		
+	<!-- <PreferenceCategory
+		android:title="Middle Button Activity">
+		<CheckBoxPreference
+			android:title="Long-press"
+			android:key="long_middle">
+		</CheckBoxPreference>	
+		<Preference
+			android:key="long_middle_activity"
+			android:title="Select custom application"
+			android:dependency="long_middle" />
+	</PreferenceCategory> -->
+	
+	<PreferenceCategory
+	    android:title="Left Button Activity">
+		
+	    <!-- <Preference
+			android:title="Left"
+			android:key="launch_left"
+			android:summary="Use custom application for left button">
+				<intent
+					android:action="android.intent.action.MAIN"
+					android:targetPackage="com.htc.launcher"
+					android:targetClass="com.htc.launcher.classic.LauncherLeft" />
+		</Preference> -->
+		
+		<CheckBoxPreference
+			android:title="Use custom application"
+			android:summary="Use custom application instead of the dialer"
+			android:key="click_left">
+		</CheckBoxPreference>
+		<Preference
+			android:key="click_left_activity"
+			android:title="Select custom application"
+			android:dependency="click_left" />
+	    
+		<!-- <CheckBoxPreference
+			android:title="Long-press"
+			android:key="long_left">
+		</CheckBoxPreference>
+		<Preference
+			android:key="long_left_activity"
+			android:title="Select custom application"
+			android:dependency="long_left" /> -->
+	</PreferenceCategory>
+	
+	<!--<CheckBoxPreference
+		android:key="use_custom_rosie_activity"
+		android:title="Enable custom personalize button" />
+
+	<Preference
+		android:key="pref_rosie_activity"
+		android:title="Custom Personalize button"
+		android:dependency="use_custom_rosie_activity" />-->
+	
+	<PreferenceCategory android:title="Other Interface Tweaks" >
+	    
+	    <ListPreference
+			android:key="app_drawer_app"
+			android:title="App drawer columns"
+			android:summary="Requires a restart of Rosie or the system" 
+			android:entries="@array/pref_rosie_columns_entries"
+		    android:entryValues="@array/pref_rosie_columns_values" />	
+		    
+	    <CheckBoxPreference
+		    android:title="Statusbar visibility on Home"
+		    android:summary="Note, when viewing Notifications there is a glitch"
+		    android:key="hide_show" />
+
+		<!-- <CheckBoxPreference
+			android:key="transparent_apps"
+			android:title="Transparent app drawer" 
+			android:summary="Requires a restart of Rosie or the system" 
+			android:enabled="false" />
+		
+	    <CheckBoxPreference
+			android:key="enable_unlock_animation"
+			android:title="Enable unlock animation" 
+			android:summary="Sense 2.1 and up" 
+			android:enabled="false" />
+				
+		<CheckBoxPreference
+			android:key="paginated_apps"
+			android:title="Paginated app drawer"
+			android:summary="Sense 2.1 and up"
+			android:enabled="false"/>	
+
+		<CheckBoxPreference
+			android:key="enable_screenshots"
+			android:title="Enable sceenshot function"
+			android:summary="Sense 2.1 and up" 
+			android:enabled="false"/>		
+
+		<CheckBoxPreference
+			android:key="screen_on_mms"
+			android:title="Screen on SMS"
+			android:summary="Sense 2.1 and up" 
+			android:enabled="false"/> -->
+	</PreferenceCategory>
+	
+	<PreferenceCategory
 			android:title="@string/credits">
 			
 			<Preference
@@ -30,5 +160,4 @@
 				android:title="@string/tt" />
 			
 		</PreferenceCategory>
-
 </PreferenceScreen>
